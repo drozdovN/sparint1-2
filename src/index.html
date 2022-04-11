@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/css/main.css">
-    
+    <link rel="stylesheet" href="css/main.css">
     <title>Beauty</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <div class="header-top">
-                    <a href="#" class="logo">Мир красоты</a>
-                    <nav class="navigation">
+                <div class="header__top">
+                    <a href="#" class="header__logo">Мир красоты</a>
+                    <nav class="header__navigation">
                         <ul>
                             <li><a href="#">Услуги и цены</a></li>
                             <li><a href="#">Мастера</a></li>
@@ -23,7 +22,7 @@
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div class="info">
+                    <div class="header__info">
                         <a href="tel:84996861762">8 (499) 686-17-62</a>
                         <span>с 10.00 до 19.00 без выходных</span>
                     </div>
@@ -33,15 +32,15 @@
                     <p class="offer__discription">Идеальный образ за 60 минут</p>
                     <button class="btn">Записаться онлайн</button>
                 </div>
-                <ul class="social">
+                <ul class="header__social">
                     <li><a href="#"><img src="img/VK.png" alt="VK"></a></li>
                     <li><a href="#"><img src="img/Instagram.png" alt="Instagram"></a></li>
                     <li><a href="#"><img src="img/Yotube.png" alt="YouTube"></a></li>
                 </ul>
-                <div class="girl">
+                <div class="header__girl">
                     <img src="img/girl.png"  alt="">
                 </div>
-                <div class="circle"></div>
+                <div class="header__circle"></div>
             </div>
         </header>
     </div>
@@ -93,7 +92,7 @@
             <div class="container">
                 <h2 class="title__popular">Популярные услуги</h2>
                 <div class="seaction-popular">
-                    <div class="col">
+                    <div class="col__popular">
                         <img src="img/popular.png" alt="1">
                         <h4>Маникюр</h4>
                         <p class="col__discription">
@@ -101,7 +100,7 @@
                         </p>
                         <button class="btn btn__col">Записаться</button>
                     </div>
-                    <div class="col">
+                    <div class="col__popular">
                         <img src="img/popular.png" alt="1">
                         <h4>Покрытие гель-лак</h4>
                         <p class="col__discription">
@@ -109,7 +108,7 @@
                         </p>
                         <button class="btn btn__col">Записаться</button>
                     </div>
-                    <div class="col">
+                    <div class="col__popular">
                         <img src="img/popular.png" alt="1">
                         <h4>Бразильский маникюр</h4>
                         <p class="col__discription">
@@ -119,7 +118,7 @@
                     </div>
                 </div>
                 <div class="seaction-populars">
-                    <div class="cols">
+                    <div class="cols__popular">
                         <img src="img/popular.png" alt="1">
                         <h4>Педикюр</h4>
                         <p class="col__discription">
@@ -127,7 +126,7 @@
                         </p>
                         <button class="btn btn__col">Записаться</button>
                     </div>
-                    <div class="cols">
+                    <div class="cols__popular">
                         <img src="img/popular.png" alt="1">
                         <h4>Парафинотерапия</h4>
                         <p class="col__discription">
@@ -140,7 +139,7 @@
         </section>
         <section class="section">
             <div class="container">
-                <h2 class="title__popular">Услуги и цены</h2>
+                <h2 class="title__popularss">Услуги и цены</h2>
                 <nav class="navigation-price">
                     <ul>
                         <li><a href="#"><span>Стрижка и укладка</span></a></li>
@@ -151,41 +150,84 @@
                         <li><a href="#">Массаж</a></li>
                     </ul>
                 </nav>
-                <table>
-                    <tr>
-                        <td> <h5>Женская стрижка</h5>
-                        <span>Короткие волосы</span> 
-                        </td>
-                        <td class="colors">1200 ₽</td>
-                        <td><h5>Стрижка бороды и усов</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                    </tr>
-                    <tr>
-                        <td><h5>Мужская стрижка</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                        <td><h5>Экспресс укладка</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                    </tr>
-                    <tr>
-                        <td><h5>Детский Стиль</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                        <td><h5>Укладка дневная</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                    </tr>
-                    <tr>
-                        <td><h5>Креативный Стиль</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">1200 ₽</td>
-                        <td><h5>Прическа вечерняя (свадебная)</h5>
-                            <span>Короткие волосы</span> </td>
-                        <td class="colors">3000 ₽</td>
-                    </tr>
-                </table>
+                <div class="table">
+                    <div class="table__left">
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Женская стрижка</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Мужская стрижка</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Детский Стиль</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Креативный Стиль</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="table__right">
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Стрижка бороды и усов</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Экспресс укладка</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Укладка дневная</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>1200 ₽</span>
+                           </div>
+                        </div>
+                        <div class="table__string">
+                            <div class="table__column">
+                                <h5>Прическа вечерняя (свадебная)</h5>
+                                <span>Короткие волосы</span>
+                            </div> 
+                           <div class="table__columns">
+                               <span>3000 ₽</span>
+                           </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">
@@ -207,7 +249,7 @@
                             </p>
                         </div>
                         <div class="card">
-                            <img src="img/Jana.png" alt="1">
+                            <a class="nav" href=""><img src="img/Jana.png" alt="1"></a>
                             <h4 class="master__title">Калилова Жанна</h4>
                             <p class="master__discription">
                                 Визажист-стилист
@@ -239,7 +281,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>   
         <section class="section">
             <div class="container">
                 <div class="works">
@@ -330,28 +372,27 @@
             </div>
         </section>
     </main>    
-        <footer class="footer">
-            <div class="container">
-                <div class="credits">
-                    <div class="credits-bloc">
-                        <p class="credits__discription">
-                            © 2020 «Море красоты»
-                        </p>
-                        <a href="#" class="credits__footer">
-                            Политика конфиденциальности
-                        </a>
-                    </div>
-                    <nav class="navigation__footer">
-                        <ul>
-                            <li><a href="#">Услуги и цены</a></li>
-                            <li><a href="#">Мастера</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </nav>
+    <footer class="footer">
+        <div class="container">
+            <div class="credits">
+                <div class="credits-bloc">
+                    <p class="credits__discription">
+                        © 2020 «Море красоты»
+                    </p>
+                    <a href="#" class="credits__footer">
+                        Политика конфиденциальности
+                    </a>
                 </div>
+                <nav class="navigation__footer">
+                    <ul>
+                        <li><a href="#">Услуги и цены</a></li>
+                        <li><a href="#">Мастера</a></li>
+                        <li><a href="#">Наши работы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
