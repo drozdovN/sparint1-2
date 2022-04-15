@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <title>Beauty</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
                             <li><a href="#">Наши работы</a></li>
                             <li><a href="#">О нас</a></li>
                             <li><a href="#">Контакты</a></li>
-                        </ul>
+                        </ul> 
                     </nav>
                     <div class="header__info">
                         <a href="tel:84996861762">8 (499) 686-17-62</a>
@@ -287,24 +290,36 @@
                 <div class="works">
                     <h2 class="works__title">Наши работы</h2>
                     <div class="actions">
-                        <button class="actions__button"><img src="img/Left.svg" alt=""></button>
+                        <button class="actions__buttons"><img src="img/Left.svg" alt=""></button>
                         <button class="actions__button"><img src="img/Right.svg" alt=""></button>
                     </div>
                 </div>
             </div>
                 <div class="beauty">
                     <div class="beauty__work">
-                        <img src="img/face (1).png" alt="">
+                        <a data-fancybox="gallery" href="img/face (1).png"><img src="img/face (1).png" alt=""></a>
                     </div>
                     <div class="beauty__work">
-                        <img src="img/face 2.png" alt="">
+                        <a data-fancybox="gallery" href="img/face 2.png"><img src="img/face 2.png" alt=""></a>
                     </div>
                     <div class="beauty__works">
-                        <img src="img/nail.png" alt="">
+                        <a data-fancybox="gallery" href="img/nail.png"><img src="img/nail.png" alt=""></a>
                     </div>
                     <div class="beauty__work">
-                        <img src="img/hair.png" alt="">
-                    </div> 
+                        <a data-fancybox="gallery" href="img/hair.png"><img src="img/hair.png" alt=""></a>
+                    </div>
+                    <div class="beauty__work">
+                        <a data-fancybox="gallery" href="img/face (1).png"><img src="img/face (1).png" alt=""></a>
+                    </div>
+                    <div class="beauty__work">
+                        <a data-fancybox="gallery" href="img/face 2.png"><img src="img/face 2.png" alt=""></a>
+                    </div>
+                    <div class="beauty__works">
+                        <a data-fancybox="gallery" href="img/nail.png"><img src="img/nail.png" alt=""></a>
+                    </div>
+                    <div class="beauty__work">
+                        <a data-fancybox="gallery" href="img/hair.png"><img src="img/hair.png" alt=""></a>
+                    </div>
                 </div>
             <div class="container">
                 <div class="logotips-sponsors">
@@ -394,5 +409,22 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.beauty').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '.actions__buttons',
+                nextArrow: '.actions__button',
+            });
+        });
+    </script>
 </body>
 </html>

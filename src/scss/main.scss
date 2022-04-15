@@ -285,6 +285,9 @@
     max-width: 350px;
     max-height: 340px;
   }
+  .col__popular img {
+    margin-bottom: 20px;
+  }
   .seaction-populars img {
     object-fit: cover;
     width: 350px;
@@ -319,6 +322,7 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
+    margin: 8px 0 16px 0;
   }
   .btn__col {
     border-radius: 17px;
@@ -513,6 +517,17 @@
 .actions__button:hover {
     background-color: #F8F6F7;
 }
+.actions__buttons {
+  border-radius: 100%;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 13px 13px 11px 11px;
+  
+}
+.actions__buttons:hover {
+  background-color: #F8F6F7;
+}
 .beauty {
     display: flex;
     align-items: center;
@@ -536,46 +551,48 @@
 .logotips-sponsors {
     text-align: -webkit-center;
 }
-.beauty__work:first-child {
-    padding-right: 20px;
-}
+// .beauty__work:first-child {
+//     padding-right: 20px;
+// }
 
 .beauty__works {
-    position: relative;
-    cursor: pointer;
-    height: 100%;
-    min-width: 370px;
-    max-width: 371px;
-    width: 100%;
-    padding: 0 12px 0 13px;
+  filter: brightness(170%);
+}
+.beauty__works img {
+    width: 338px;
+    height: 338px;
+}
+.beauty__work img {
+  width: 338px;
+  height: 338px;
 }
 
 
-.beauty__works:before {
-    content: '';
-    position: absolute;
-    width: 46px;
-    height: 48px;
-    top: 149px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url('../img/lupa.svg') no-repeat center;
+// .beauty__works:before {
+//     content: '';
+//     position: absolute;
+//     width: 46px;
+//     height: 48px;
+//     top: 149px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     background: url('../img/lupa.svg') no-repeat center;
     
-    transition: 0.15s;
-}
-.beauty__works:after {
-    content: 'Увеличить';
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 500;
-    position: absolute;
-    text-align: center;
-    z-index: 3;
-    top: 205px;
-    left: 0;
-    right: 0;
-    color: #fff;
-}
+//     transition: 0.15s;
+// }
+// .beauty__works:after {
+//     content: 'Увеличить';
+//     font-size: 14px;
+//     line-height: 17px;
+//     font-weight: 500;
+//     position: absolute;
+//     text-align: center;
+//     z-index: 3;
+//     top: 205px;
+//     left: 0;
+//     right: 0;
+//     color: #fff;
+// }
 .link {
     display: flex;
     /* justify-content: space-between; */
@@ -707,5 +724,7 @@ h6 {
     font-weight: 400;
     color: #333;
 }
+
+
 
 @import './media';

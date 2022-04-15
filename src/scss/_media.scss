@@ -3,33 +3,159 @@
 } 
 /* Medium Devices, Desktops */ 
 @media only screen and (max-width: 992px) { 
+    .wrapperss {
+        width: max-content;
+    }
+    
 } 
 /* Small Devices, Tablets */ 
 @media only screen and (max-width: 768px) {
+    .header {
+        max-height: 100%;
+    }
+    
+    .header__logo {
+        margin: auto;
+    }
     .header__top {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
+    }
+    .header__navigation li:not(:last-child) {
+        margin-right: 0;
     }
     .header__navigation ul {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
     }
-    .phone-info {
+    .header__social {
+        right: 40%;
+        display: flex;
+        top: 23%;
+        margin: auto; 
+    }
+    .header__social li:not(:last-child) {
+        margin-right: 28px;;
+    }
+    .header__social li {
+        margin-bottom: 0;
+    }
+    .offer {
         text-align: center;
-    }
-
-    .logo {
         margin: auto;
     }
-
-    .navigation__list {
+    .header__girl {
+        text-align: center;
+        left: 0;
+        position: relative;
+        
+    }
+    .header__girl img {
+        width: 100%;
+    }
+    .header__circle {
+        text-align: center;
+        left: 0;
+        position: relative;
+        width: 100%;
+    }
+    .seaction-wrapper {
+        flex-direction: column;
+       align-items: center;
+       text-align: center;
+    }
+    .seaction__video {
+        margin-bottom: 30px;
+        margin: auto;
+        top: 0;
+    }
+    .seaction-plus {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .seaction-popular {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .seaction-populars {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .title__popular {
+        text-align: center;
+    }
+    .navigation-price ul {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .navigation-price li:not(:last-child) {
+        margin-right: 0;
+    }
+    .table {
+        flex-direction: column;
+    }
+    .master {
+        flex-direction: column;
+        gap: 150px;
+        
+        align-items: center;
+    }
+    .wrappers {
+        text-align: center;
+        
+    }
+    .works {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+    .beauty {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .logotips-beauty {
+        flex-direction: column;
+        margin-bottom: 300px;
+    }
+    
+    .link {
         flex-direction: column;
         align-items: center;
     }
-
-    .navigation__item:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .form {
+        margin: 0 0 30px 0;
+        
+        width: 100%;
+    }
+    .contakt {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .credits {
+        flex-direction: column;
+        align-items: center;
+    }
+    .credits-bloc {
+        text-align: center;
+    }
+    .tel {
+        width: 100%;
+        padding-right: 0%;
+    }
+    .btn__form {
+        width: 100%;
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+    .name {
+        width: 100%;
+        padding-right: 0%;
     }
 } 
 /* Extra Small Devices, Phones */ 
