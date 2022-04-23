@@ -1,9 +1,0 @@
-window.onload = () => { 
-  btn.addEventListener('click', () => { 
-    mobileMenu.classList.add('visible'); 
-  }); 
-   
-  closeBtn.addEventListener('click', () => { 
-    mobileMenu.classList.remove('visible'); 
-  }); 
-};
