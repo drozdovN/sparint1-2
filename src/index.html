@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <title>Beauty</title>
 </head>
@@ -16,6 +14,9 @@
             <div class="container">
                 <div class="header__top">
                     <a href="#" class="header__logo">Мир красоты</a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
                     <nav class="header__navigation">
                         <ul>
                             <li><a href="#">Услуги и цены</a></li>
@@ -23,7 +24,7 @@
                             <li><a href="#">Наши работы</a></li>
                             <li><a href="#">О нас</a></li>
                             <li><a href="#">Контакты</a></li>
-                        </ul> 
+                        </ul>
                     </nav>
                     <div class="header__info">
                         <a href="tel:84996861762">8 (499) 686-17-62</a>
@@ -63,7 +64,6 @@
                             Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
                             а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем 
                             нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.
-                            <p><span>Развернуть</span></p>   
                         </p>
                     </div>
                     <div class="seaction__video">
@@ -413,18 +413,63 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./main.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('.beauty').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                prevArrow: '.actions__buttons',
-                nextArrow: '.actions__button',
+            $('.header__burger').click(function(event) {
+                $('.header__burger,.header__navigation').toggleClass('active');
+                $('.body').toggleClass('lock');
             });
         });
+    </script>
+    <script>
+        const TogglePhrases = { 
+        Collapse: 'Свернуть', 
+        Expand: 'Развернуть' 
+        }; 
+
+        class SeactionDiscription { 
+        constructor(elem, maxLength = 150) { 
+        this.maxLength = maxLength; 
+        this.elem = elem;     
+        this.originalText = elem.textContent; 
+        
+        this.isToggle = false; 
+        
+        this.toggleBtn = document.createElement('button')
+        this.toggleBtn.textContent = TogglePhrases.Expand; 
+        this.toggleBtn.addEventListener('click', () => this.toggle()); 
+        
+        this.elem.textContent = this._getShortText(); 
+        this.elem.append(this.toggleBtn); 
+        } 
+        
+        toggle() { 
+        this.isToggle = !this.isToggle; 
+        
+        this.toggleBtn.textContent = this.isToggle 
+            ? TogglePhrases.Collapse 
+            : TogglePhrases.Expand; 
+        
+        this.elem.textContent = this.isToggle 
+            ? this.originalText 
+            : this._getShortText(); 
+        
+        this.elem.append(this.toggleBtn); 
+        } 
+        
+        _getShortText() { 
+            return (this.originalText.slice(0, this.maxLength)) + '...'; 
+        } 
+        } 
+
+        window.onload = () => { 
+        const textElems = document.querySelectorAll('.seaction__discription'); 
+        
+        for (const el of textElems) { 
+            new SeactionDiscription (el, 500); 
+        } 
+    }
     </script>
 </body>
 </html>

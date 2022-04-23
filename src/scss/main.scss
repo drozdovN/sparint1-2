@@ -91,6 +91,9 @@
         left: 544px;
         top: 229px;
       }
+      &__burger {
+        display: none;
+      }
   }
   .header .container {
     position: relative;
@@ -161,9 +164,12 @@
     margin-top: 0;
     margin-bottom: 24px;
   }
-  .seaction-header span {
+  button {
     font-size: 14px;
     color: #278AFF;
+    padding: 0;
+    background: none;
+    border: none;
   }
   .seaction__video {
     min-width: 297px;
@@ -311,6 +317,9 @@
     max-width: 350px;
     max-height: 340px;
   }
+  .cols__popular img {
+    margin-bottom: 20px;
+  }
   h4 {
     color: #333;
     font-size: 18px;
@@ -449,6 +458,9 @@
     max-width: 255px;
     width: 100%;
     opacity: 0.9;
+  }
+  .card img {
+    filter: brightness(170%);
   }
  .nav  {
      display: block;

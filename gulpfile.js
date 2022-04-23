@@ -2,6 +2,8 @@ const { src, dest, series, watch, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const del = require('del');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
 function buildSass() {
     return src('src/scss/**/*.scss')
@@ -25,6 +27,14 @@ function copy() {
     .pipe(browserSync.stream());
 }
 
+function buildJs() {
+    return src('src/js/index.js')
+      .pipe(webpackStream(require('./webpack.config')))
+      .pipe(rename('main.min.js'))
+      .pipe(dest('src'))
+      .pipe(dest('dist'))
+      .pipe(browserSync.stream());
+  }
 
 function cleanDist() {
     return del('dist');
@@ -38,11 +48,12 @@ function createDevServer() {
 }
 
 function serve() {
+    watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
     watch('src/scss/**/*.scss', buildSass);
     watch('src/**/*.html', buildHtml);
 }
 
 
 
-exports.build = series(cleanDist, buildSass, buildHtml, copy);
-exports.default = series(buildSass, parallel(createDevServer, serve));
+exports.build = series(cleanDist, buildSass, buildHtml, buildJs, copy);
+exports.default = series([buildSass, buildJs], parallel(createDevServer, serve));
